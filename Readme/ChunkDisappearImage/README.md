@@ -54,11 +54,11 @@ public partial struct UIVertex
 ```cs
 mLocalToCanvas = canvas.rootCanvas.transform.localToWorldMatrix.inverse * transform.localToWorldMatrix;
 ```
-**image的模型矩阵：**
+**image的模型矩阵：**  
 ![](ChunkDisappearImageDoc/formula1.png)  
-**canvas的模型矩阵：**
+**canvas的模型矩阵：**  
 ![](ChunkDisappearImageDoc/formula2.png)  
-由于矩阵满足结合律，所以用用canvas的模型矩阵的逆乘以image的模型矩阵会将canvas的模型矩阵消掉，也就是image坐标->canvas坐标的模型矩阵：
+由于矩阵满足结合律，所以用用canvas的模型矩阵的逆乘以image的模型矩阵会将canvas的模型矩阵消掉，也就是image坐标->canvas坐标的模型矩阵：  
 ![](ChunkDisappearImageDoc/formula3.png)  
 用这个矩阵乘上image上的本地坐标就可以算出对应的canvas上的坐标。 
 ### 开始时间和结束时间的计算
