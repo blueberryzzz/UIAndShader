@@ -55,11 +55,11 @@ public partial struct UIVertex
 mLocalToCanvas = canvas.rootCanvas.transform.localToWorldMatrix.inverse * transform.localToWorldMatrix;
 ```
 **image的模型矩阵：**
-$Canvas_{model} ⋅ (Image_{Translation} ⋅ Image_{Scaling} ⋅ Image_{Rotation})$
+![](ChunkDisappearImageDoc/formula1.png)  
 **canvas的模型矩阵：**
-$Canvas_{model}$
+![](ChunkDisappearImageDoc/formula2.png)  
 由于矩阵满足结合律，所以用用canvas的模型矩阵的逆乘以image的模型矩阵会将canvas的模型矩阵消掉，也就是image坐标->canvas坐标的模型矩阵：
-$Image_{Translation} ⋅ Image_{Scaling} ⋅ Image_{Rotation}$    
+![](ChunkDisappearImageDoc/formula3.png)  
 用这个矩阵乘上image上的本地坐标就可以算出对应的canvas上的坐标。 
 ### 开始时间和结束时间的计算
 **开始时间**
@@ -92,7 +92,3 @@ float f = clamp((_Delta - distance * _Interval) / tempDis, 0, 1);
 # 小结
 原理其实并不难，主要只有两部分：改mesh，改shader。就是一些坐标的转换、开始结束时间的控制、版本的兼容性比较麻烦。  
 在把整个流程跑通一次之后，就会对流程有一个较为全面的认识，下次做2D或是3D的一些效果思路也也会更广一些。  
-
-有什么讲的不对或者代码有bug的地方欢迎各位留言指正，我会尽快改正。  
-
-代码链接：
