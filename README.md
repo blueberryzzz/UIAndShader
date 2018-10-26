@@ -8,6 +8,6 @@ CircleList是一个通过UGUI实现的圆形列表，通过缩放、平移和层
 ![](Readme/CircleList/CircleListDoc/illustrate1.gif)  
 文档链接：[CircleList](Readme/CircleList/README.md)
 ## ChunkDisappearImage
-一个以矩形为单位的图片消失分解效果的实现。
-![](Readme/ChunkDisappearImage/ChunkDisappearImageDoc/illustrate1.gif)
+一个以矩形为单位的图片消失分解效果的实现。  
+![](Readme/ChunkDisappearImage/ChunkDisappearImageDoc/illustrate1.gif)  
 文档链接：[ChunkDisappearImage](Readme/ChunkDisappearImage/README.md)
